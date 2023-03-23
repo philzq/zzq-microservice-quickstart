@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.${rootArtifactId}.controller;
+package ${package}.${rootArtifactId}.application.controller;
 
 import zzq.zzqsimpleframeworkcommon.entity.CommonRsp;
 import org.springframework.web.bind.annotation.GetMapping;
