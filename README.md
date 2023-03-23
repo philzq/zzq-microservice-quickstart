@@ -34,16 +34,15 @@ Repository：https://github.com/philzq/zzq-microservice-quickstart-OMG
 
 树状结构：
 ```
-C:.
 ├─zzzzqqqq-application
 │  └─src
 │      ├─main
 │      │  ├─java
 │      │  │  └─zq
 │      │  │      └─zzzzqqqq
-│      │  │          ├─config
-│      │  │          ├─controller
-│      │  │          └─executor
+│      │  │          └─application
+│      │  │              ├─config
+│      │  │              ├─controller
 │      │  │              └─jobhandler
 │      │  └─resources
 │      └─test
@@ -122,6 +121,5 @@ C:.
                         ├─facade
                         └─service
                             └─impl
-
 ```
 
