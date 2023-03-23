@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>zzq.microservices</groupId>
+  <artifactId>zzq-microservice-quickstart</artifactId>
+  <version>1.0.0</version>
+  <packaging>maven-archetype</packaging>
+
+  <name>zzq-microservice-quickstart</name>
+
+  <build>
+    <extensions>
+      <extension>
+        <groupId>org.apache.maven.archetype</groupId>
+        <artifactId>archetype-packaging</artifactId>
+        <version>3.2.1</version>
+      </extension>
+    </extensions>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <artifactId>maven-archetype-plugin</artifactId>
+          <version>3.2.1</version>
+          <configuration>
+            <!-- Required so that .gitignore gets included in archetypes -->
+            <!-- See https://issues.apache.org/jira/browse/ARCHETYPE-606 -->
+            <useDefaultExcludes>false</useDefaultExcludes>
+          </configuration>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>3.3.0</version>
+          <configuration>
+            <!-- Required so that .gitignore gets included in archetypes -->
+            <!-- See https://issues.apache.org/jira/browse/MRESOURCES-190 -->
+            <addDefaultExcludes>false</addDefaultExcludes>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <description>prototype project for microservices</description>
+
+  <url>https://spring.io/projects/spring-boot/microservices-parent/zzq-microservice-quickstart</url>
+
+  <developers>
+    <developer>
+      <name>phil</name>
+      <email>2044579211@qq.com</email>
+      <organization>zzq Data Technology Services Co.</organization>
+    </developer>
+  </developers>
+
+  <licenses>
+    <license>
+      <name>Apache License, Version 2.0</name>
+      <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+    </license>
+  </licenses>
+
+  <repositories>
+    <repository>
+      <id>aliyunPublic</id>
+      <name>aliyunPublic</name>
+      <url>https://maven.aliyun.com/repository/public</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+
+    <repository>
+      <id>spring-milestones</id>
+      <name>Spring Milestones</name>
+      <url>https://repo.spring.io/milestone</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+</project>

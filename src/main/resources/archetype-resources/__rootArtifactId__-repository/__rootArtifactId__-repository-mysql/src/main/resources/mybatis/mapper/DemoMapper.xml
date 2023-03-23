@@ -1,0 +1,22 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="${groupId}.${rootArtifactId}.repository.mysql.mybatis.mapper.DemoMapper">
+    <resultMap id="BaseResultMap" type="${groupId}.${rootArtifactId}.repository.mysql.domain.DemoDO">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+    </resultMap>
+    <!--辅助代码，禁止转正-->
+    <!--suppress MybatisMapperXmlInspection -->
+    <select id="selectSelective" parameterType="${groupId}.${rootArtifactId}.repository.mysql.domain.DemoDO" resultType="${groupId}.${rootArtifactId}.repository.mysql.domain.DemoDO">
+        select id, name from demo where 1=1
+        and id = ${symbol_pound}{id,jdbcType=BIGINT}
+        <if test="name != null and name != ''">
+            and name = ${symbol_pound}{name,jdbcType=VARCHAR}
+            and name like concat('%', ${symbol_pound}{name,jdbcType=VARCHAR}, '%')
+        </if>
+    </select>
+    <!--████████上面是自动生成的，改了会被覆盖，有需要可以添加到下面，此行不能删除████████-->
+</mapper>
