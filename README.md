@@ -10,7 +10,7 @@
 groupId：zzq.microservices
 artifactId：zzq-microservice-quickstart
 version：1.0.0
-Repository：https://github.com/philzq/zzq-microservice-quickstart-OMG
+Repository：https://github.com/philzq/zzq-microservice-quickstart
 ```
 
 
